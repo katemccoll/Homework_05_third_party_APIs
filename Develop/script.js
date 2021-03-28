@@ -19,14 +19,17 @@ $(".time-block").remove();
 for (let i = 0; i < hours.length; i++) {
     var row = timeBlock.clone();
     row.find(".hour").append(hours[i]);
+    row.find(".hour").data("hourOfDay", i + 9);
+
     row.find(".saveBtn").data("rowIndex", i);
     row.find(".description").append(descriptions[i]);
     row.appendTo(".container");
+
+
 }
 
 
 $(".saveBtn").click(function (e) {
-
     let rowIndex = $(e.currentTarget).data("rowIndex");
     // descriptions[rowIndex] = 
     let newDescription = $(".description")[rowIndex];
@@ -34,30 +37,32 @@ $(".saveBtn").click(function (e) {
     descriptions[rowIndex] = newDescription.value;
     localStorage.setItem(STORAGE_TIME_BLOCK_KEY, JSON.stringify(descriptions));
     console.log(rowIndex);
-
 })
 
 
-
-
-
 function trackingHour() {
-    var timeNow = moment().format("ha");
-    $(".hour").each(function () {
-        var hourBlock = $(this).attr("id");
-        console.log(hourBlock, timeNow);
-        if (hourBlock < timeNow) {
-            $(this).addClass("past");
-        } else if (hourBlock === timeNow) {
-            $(this).addClass("present");
-        } else if (hourBlock > timeNow) {
-            $(this).addClass("future");
+    var hourOfDay = moment().hour();
+    $(".time-block").each(function (index, timeBlockElement) {
+        timeBlockElement = $(timeBlockElement);
+
+        timeBlockElement.removeClass("past");
+        timeBlockElement.removeClass("present");
+        timeBlockElement.removeClass("future");
+
+
+        var rowHour = timeBlockElement.find(".hour").data("hourOfDay");
+        if (rowHour < hourOfDay) {
+            timeBlockElement.addClass("past");
+        } else if (rowHour === hourOfDay) {
+            timeBlockElement.addClass("present");
+        } else if (rowHour > hourOfDay) {
+            timeBlockElement.addClass("future");
         }
     })
 }
 
-
-
+setInterval(trackingHour, 1000);
+trackingHour();
 
 
 
