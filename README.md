@@ -74,3 +74,12 @@ We have a few classes that are currently not being used.
 1. get the date in the p tag working. 
 2. create the columns
 3. create timeblock - rows
+
+
+Bootstrap:
+Grid - there are three columns, middle the largest 
+Each row needs to have a time, text input and a button for saving
+
+Need something to keep track of the time. So we can have classes of past, present and future. THis is need for the colours.
+
+need a local storage to set time and text. setItem() for this
