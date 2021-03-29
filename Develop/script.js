@@ -28,7 +28,7 @@ for (let i = 0; i < hours.length; i++) {
 
 }
 
-
+//  Save Button
 $(".saveBtn").click(function (e) {
     let rowIndex = $(e.currentTarget).data("rowIndex");
     // descriptions[rowIndex] = 
@@ -40,6 +40,7 @@ $(".saveBtn").click(function (e) {
 })
 
 
+// Colour coded blocks
 function trackingHour() {
     var hourOfDay = moment().hour();
     $(".time-block").each(function (index, timeBlockElement) {
