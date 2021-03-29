@@ -96,7 +96,7 @@ Using bootstrap, we can work out the layout that is needed. We needed two small 
 After this I realised that there was one of two ways of moving a head. One I could write out blocks in my HTML for the different hours. Or I could put it into a loop and repeat it 7 times. Second option seems like the nicer way to go as the code will be cleaner by the end of it.
 
 ## Save Button
-Now that the layout out is sorted, time to fill them in. The save button has an icon, which I found with bootstrap. I went to my javascript and started writing the code that I needed. The save button when it is clicked needs to be able to save the new description within the time block that it is written in. So when the page is reloaded, it will still be there. I do need to do my description and time first before I finish this part of the code off.
+Now that the layout out is sorted, time to fill them in. The save button has an icon, from font awesome website. I went to my javascript and started writing the code that I needed. The save button when it is clicked needs to be able to save the new description within the time block that it is written in. So when the page is reloaded, it will still be there. I do need to do my description and time first before I finish this part of the code off.
 
 <img src="Assets\Time-blocks-added.JPG">
 
