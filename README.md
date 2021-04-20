@@ -1,7 +1,11 @@
 # Homework_05_third_party_APIs
 Creating a work day scheduler
 
-Creating a calendar app that allows user to save events for each hour of the day.This will run in the browser and powered by jQuery.
+Creating a calendar app that allows user to save events for each hour of the day. This will run in the browser and powered by jQuery.
+
+Live link: https://katemccoll.github.io/Work_Day_Scheduler/Develop/index.html
+
+Technologies used: HTML, CSS, JavaScript, jQuery
 
 ## User Story
 
@@ -124,3 +128,6 @@ Once I linked this up, I realised that this would only work if I reloaded the pa
 Here we have a functioning Work Day Scheduler that you can add appointments in and save them. The colour coded blocks will keep you up to date without having to check the time.
 
 <img src="Assets\Finished.JPG">
+
+
+If you would like any more information, feel free to contact me by email.
