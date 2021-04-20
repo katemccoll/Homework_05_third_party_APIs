@@ -1,5 +1,5 @@
-# Homework_05_third_party_APIs
-Creating a work day scheduler
+# Day Planner
+Creating a online work day scheduler
 
 Creating a calendar app that allows user to save events for each hour of the day. This will run in the browser and powered by jQuery.
 
